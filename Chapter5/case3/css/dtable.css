@@ -1,0 +1,115 @@
+/*
+   New Perspectives on HTML and CSS
+   Tutorial 5
+   Case Problem 3
+
+   Dome Table Style Sheet
+   Author: 
+   Date:   
+
+   Filename:         dtable.css
+   Supporting files: bottom.jpg, bottomleft.jpg, bottomright.jpg,
+                     left.jpg,right.jpg, tableback.jpg,
+                     top.jpg, topleft.jpg, topright.jpg
+
+*/
+
+.domeSpecs {
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  float: right;
+  border-collapse: collapse;
+  background-image: url(../img/tableback.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.domeSpecs td {
+  padding: 0 5px;
+}
+.domeSpecs caption {
+  font-size: 18px;
+  font-kerning: 5px;
+  text-align: center;
+  caption-side: top;
+  margin-bottom: 10px;
+}
+.domeSpecs thead {
+  border-bottom: 2px solid gray;
+  background-image: url(../img/top.jpg);
+  background-repeat: repeat-x;
+}
+.domeSpecs thead tr {
+  height: 40px;
+}
+.domeSpecs thead th {
+  padding: 0 5px;
+  font-kerning: 2px;
+}
+.domeSpecs thead th:first-of-type {
+  background-image: url(../img/topleft.jpg);
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+.domeSpecs thead th:last-of-type {
+  background-image: url(../img/topright.jpg);
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.domeSpecs tfoot {
+  border-top: 2px solid gray;
+  text-align: center;
+  background-image: url(../img/bottom.jpg);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+.domeSpecs tfoot tr {
+  height: 40px;
+}
+
+.domeSpecs tbody tr {
+  height: 50px;
+  border-bottom: 1px dotted gray;
+}
+.domeSpecs tfoot td:first-of-type {
+  background-image: url(../img/bottomleft.jpg);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+}
+.domeSpecs tfoot td:last-of-type {
+  background-image: url(../img/bottomright.jpg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.domeSpecs tbody tr td:first-of-type {
+  background-image: url(../img/left.jpg);
+  background-position: top left;
+  background-repeat: repeat-y;
+}
+.domeSpecs tbody tr td:last-of-type {
+  background-image: url(../img/right.jpg);
+  background-position: top right;
+  background-repeat: repeat-y;
+  text-align: right;
+}
+.domeSpecs tbody tr:nth-of-type(even) {
+  background-color: rgba(152, 228, 215, 0.6);
+}
+.domeSpecs tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.firstColumn {
+  width: 22%;
+}
+
+.middleColumn {
+  width: 28%;
+}
+
+.lastColumn {
+  width: 22%;
+}
