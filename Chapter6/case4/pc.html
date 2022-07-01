@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Millenium Computers</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -16,45 +16,267 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./css/mill.css">
-    <link rel="stylesheet" href="./css/oform.css">
+    <link rel="stylesheet" href="./css/mill.css" />
+    <link rel="stylesheet" href="./css/oform.css" />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="#">Millenium Computers</a>
-        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownId">
-                        <a class="dropdown-item" href="#">Action 1</a>
-                        <a class="dropdown-item" href="#">Action 2</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
+  <body class="bg-light">
+    <nav
+      class="navbar navbar-expand-sm navbar-light bg-light border-bottom border-primary"
+    >
+      <a class="navbar-brand" href="#"
+        ><img src="./img/download-removebg-preview (2).png" alt=""
+      /></a>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              ><h1>Millenium Computers</h1>
+              <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
-    <div class="form-group">
-      <label for=""></label>
-      <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
-      <small id="helpId" class="text-muted">Help text</small>
+
+    <div class="container">
+      <h1 class="text-center">Personal Computer Order Form</h1>
+      <form
+        class="form border border-primary p-3 d-flex bg-white flex-wrap"
+        action="http://www.mill_computers.com/orders/process.cgi"
+        method="post"
+      >
+        <fieldset class="customer border border-info p-5 w-50 bg-light">
+          <legend>Customer Info</legend>
+          <div class="form-group">
+            <label for="fName">First Name</label>
+            <input
+              class="form-control"
+              type="text"
+              id="fName"
+              name="fName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="lName">Last Name</label>
+            <input
+              class="form-control"
+              type="text"
+              id="lName"
+              name="lName"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="street">Street Address</label>
+            <input
+              class="form-control"
+              type="text"
+              id="street"
+              name="street"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="city">City</label>
+            <input
+              class="form-control"
+              type="text"
+              id="city"
+              name="city"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="state">State</label>
+            <input
+              class="form-control"
+              type="text"
+              id="state"
+              name="state"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="zip">Zip</label>
+            <input
+              class="form-control"
+              type="text"
+              id="zip"
+              name="zip"
+              required
+              pattern="^\d{5}(\-\d{4})?$"
+            />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              class="form-control"
+              type="text"
+              id="phone"
+              name="phone"
+              required
+              pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+            />
+          </div>
+        </fieldset>
+        <fieldset class="pcspec border border-info p-5 w-50 bg-light">
+          <legend>Custom PC Build</legend>
+          <div class="form-group">
+            <label for="pSpeed">Processor Speed</label>
+            <select class="form-control" name="pSpeed" id="pSpeed">
+              <option value="3.2GHz">3.2GHz</option>
+              <option value="4GHz">4GHz</option>
+              <option value="5.2GHz">5.2GHz</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mem">Memory</label>
+            <select class="form-control" name="mem" id="mem">
+              <option value="">1 GB</option>
+              <option value="">2 GB</option>
+              <option value="">4 GB</option>
+              <option value="">8 GB</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="monitor">Monitor Size</label>
+            <select class="form-control" name="monitor" id="monitor">
+              <option value='15"'>15"</option>
+              <option value='17"'>17"</option>
+              <option value='19"'>19"</option>
+              <option value='21"'>21"</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="hd">Hard Drive</label>
+            <select class="form-control" name="hd" id="hd">
+              <option value="240GB">240GB</option>
+              <option value="500GB">500GB</option>
+              <option value="750GB">750GB</option>
+              <option value="1TB">1TB</option>
+            </select>
+          </div>
+
+          <div class="form-check d-flex justify-content-between">
+            <p class="d-inline mr-5">DVD Burner</p>
+            <div>
+              <label class="form-check-label mr-5">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="dvd"
+                  id="dYes"
+                  value="Yes"
+                />
+                Yes
+              </label>
+              <label class="form-check-label">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="dvd"
+                  id="dNo"
+                  value="No"
+                />
+                No
+              </label>
+            </div>
+          </div>
+          <div class="form-check d-flex justify-content-between">
+            <p class="d-inline mr-5">Tuner Card</p>
+            <div>
+              <label class="form-check-label mr-5">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="tuner"
+                  id="tYes"
+                  value="Yes"
+                />
+                Yes
+              </label>
+              <label class="form-check-label">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="tuner"
+                  id="tNo"
+                  value="No"
+                />
+                No
+              </label>
+            </div>
+          </div>
+          <div class="form-check d-flex justify-content-between">
+            <p class="d-inline mr-5">Media Card Reader</p>
+            <div>
+              <label class="form-check-label mr-5">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="mCard"
+                  id="mYes"
+                  value="Yes"
+                />
+                Yes
+              </label>
+              <label class="form-check-label">
+                <input
+                  type="radio"
+                  class="form-check-input"
+                  name="mCard"
+                  id="mNo"
+                  value="No"
+                />
+                No
+              </label>
+            </div>
+          </div>
+
+          <div class="form-check">
+            <label class="form-check-label">
+                Warranty (24-month extension)
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="warranty"
+                id="warranty"
+                value="warranty"
+              />
+            </label>
+          </div>
+
+          <div class="form-group mt-2">
+            <label for="addInfo" class="font-weight-bold"
+              >Additional Information or Comments</label
+            >
+            <textarea
+              class="form-control"
+              name="addInfo"
+              id="addInfo"
+              rows="3"
+            ></textarea>
+          </div>
+        </fieldset>
+        <div class="d-flex justify-content-center w-100 mt-3">
+          <button type="submit" class="btn btn-success mx-2">Send Order</button>
+          <button type="reset" class="btn btn-danger mx-2">Cancel Order</button>
+          <button type="button" class="btn btn-primary mx-2">Contact Me</button>
+        </div>
+      </form>
     </div>
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
