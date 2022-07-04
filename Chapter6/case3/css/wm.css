@@ -26,7 +26,7 @@ section, nav {
 }
 
 body {
-   background: transparent url(back.png) repeat-y;
+   background: transparent url(../img/back.png) repeat-y;
 }
 
 header {

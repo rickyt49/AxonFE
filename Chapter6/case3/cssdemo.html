@@ -91,20 +91,24 @@
           <legend>Fonts</legend>
           <label for="fontfamily">Font Family</label>
           <select name="fontfamily" id="fontfamily">
-            <option value="default">default</option>
-            <option value="serif">serif</option>
-            <option value="sans-serif">sans-serif</option>
-            <option value="monospace">monospace</option>
-            <option value="cursive">cursive</option>
-            <option value="fantasy">fantasy</option>
-            <option value="Arial">Arial</option>
-            <option value="'Book Antiqua'">'Book Antiqua'</option>
-            <option value="'Courier New'">'Courier New'</option>
-            <option value="Geneva">Geneva</option>
-            <option value="Helvetica">Helvetica</option>
-            <option value="Impact">Impact</option>
-            <option value="Palatino">Palatino</option>
-            <option value="'Times New Roman'">'Times New Roman'</option>
+            <optgroup label="generic">
+              <option value="default">default</option>
+              <option value="serif">serif</option>
+              <option value="sans-serif">sans-serif</option>
+              <option value="monospace">monospace</option>
+              <option value="cursive">cursive</option>
+              <option value="fantasy">fantasy</option>
+            </optgroup>
+            <optgroup label="specific">
+              <option value="Arial">Arial</option>
+              <option value="'Book Antiqua'">'Book Antiqua'</option>
+              <option value="'Courier New'">'Courier New'</option>
+              <option value="Geneva">Geneva</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="Impact">Impact</option>
+              <option value="Palatino">Palatino</option>
+              <option value="'Times New Roman'">'Times New Roman'</option>
+            </optgroup>
           </select>
           <label for="fontstyle">Font Style</label>
           <select name="fontstyle" id="fontstyle">
